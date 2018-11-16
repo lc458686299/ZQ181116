@@ -11,7 +11,7 @@ public class Property {
 	public  void loadProperty(){
 		Properties prop = new Properties();
 		try {
-			InputStream in = new BufferedInputStream(new FileInputStream("config.properties"));
+			InputStream in = new BufferedInputStream(new FileInputStream("/config.properties"));
 			prop.load(in);
 			Config.DRIVER_CLASS = prop.getProperty("DRIVER_CLASS");
 			Config.CONNECTION_URL = prop.getProperty("CONNECTION_URL");
